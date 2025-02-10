@@ -34,15 +34,15 @@ img {
         flex-wrap: wrap; 
         justify-content: start;
         align-items: start;
-        padding: 10px;
-        }
-    .col-4 {
-        width:100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-left:-52px;
+        
+
     }
-    .image{
-        width:180px;
+    .image {
+        width:140px;
+        margin:10px;
+        margin-left:33px;
+        display: flex;
+    
     }
 }
