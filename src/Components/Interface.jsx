@@ -16,12 +16,12 @@ const Interface = ({ MovieData, GetRecentViewData, GetLikedMovieData }) => {
     }
     return (
         <div>
-            <div className="container-fluid" style={{ minHeight: '100vh' }}>
+            <div className="container-fluid mt-3" style={{ minHeight: '100vh' }}>
                 <div className="row">
                     {MovieData.map((item, index) => (
-                        <div className="image col-5 col-md-4 col-lg-3 col-xl-2 " key={index}>
-                            <div className="col-4 d-flex flex-column">
-                                <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="" width='200' height='250' id='image' onClick={() => { DetailedData(item) }} />
+                        <div className="image col-6 col-md-4 m-2 col-lg-3 col-xl-2 " key={index}>
+                            <div className="col-4 d-flex flex-column me-1">
+                                <img classsrc={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="" id='image' className='d-flex gap-2' onClick={() => { DetailedData(item) }} />
                                 <span className={`bi bi-heart${ForLike[index] ? '-fill' : ''} position-absolute ms-2 mt-1 text-${ForLike[index] ? 'danger' : ''} `} onClick={() => { AccessLike(index, item) }}></span>
                             </div>
                         </div>
