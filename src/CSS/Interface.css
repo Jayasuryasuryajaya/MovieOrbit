@@ -4,6 +4,9 @@ img:hover {
 .container-fluid{
     background-color: #0A0F1F;
     color: #B0B0B0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 img {
     cursor: pointer;

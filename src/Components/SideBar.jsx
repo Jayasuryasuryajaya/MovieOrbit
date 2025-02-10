@@ -15,7 +15,7 @@ const SideBar = ({ HandleUserValue }) => {
     HandleUserValue(e)
   }
   return (
-    <nav className="navbar navbar-expand-lg position-sticky top-0" style={{ backgroundColor: '#0A0F1F', zIndex: '1' }}>
+    <nav className="navbar navbar-expand-md position-sticky top-0" style={{ backgroundColor: '#0A0F1F', zIndex: '1' }}>
       <div className="container-fluid">
         <Link to="/" className="icons text-decoration-none">
           <section className="shadow-lg d-flex gap-2 align-items-center">

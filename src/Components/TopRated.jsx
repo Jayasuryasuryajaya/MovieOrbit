@@ -18,7 +18,6 @@ const TopRated = ({ GetRecentViewData }) => {
     const DetailedData = (item) => {
         GetRecentViewData(item)
         navigate('/MovieDetails', { state: item })
-
     }
     return (
         <div>
