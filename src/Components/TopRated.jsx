@@ -26,7 +26,7 @@ const TopRated = ({ GetRecentViewData }) => {
                 <div className="row">
 
                     {TopRatedMovie.map((topratitems, index) => (
-                        <div className="image col-5 col-md-4 col-lg-3 col-xl-2 p-3" key={index}>
+                        <div className="image col-5 mx-auto col-md-4 col-lg-3 col-xl-2 p-3" key={index}>
 
                             <img src={`https://image.tmdb.org/t/p/w500${topratitems.poster_path}`} alt={topratitems.title} width='200' height='250' id='image' onClick={() => { DetailedData(topratitems) }} style={{ cursor: 'pointer' }} />
                         </div>

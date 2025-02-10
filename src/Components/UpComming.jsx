@@ -33,7 +33,7 @@ const UpComming = ({ GetRecentViewData, GetLikedMovieData }) => {
             <div className="container-fluid" style={{ miHeight: '100vh' }}>
                 <div className="row">
                     {Upcommingdata.map((upcommingitems, index) => (
-                        <div className="image col-5 col-md-4 col-lg-3 col-xl-2 p-3" key={index}>
+                        <div className="image col-5 mx-auto col-md-4 col-lg-3 col-xl-2 p-3" key={index}>
                             <div className="col-4 d-flex flex-column">
                                 <img src={`https://image.tmdb.org/t/p/w500${upcommingitems.poster_path}`} alt={upcommingitems.title} width='200' height='250' id='image' onClick={() => { UpcommingMoviesData(upcommingitems) }} style={{ cursor: 'pointer' }} />
                                 <span className={`bi bi-heart${ForLike[index] ? '-fill' : ''} position-absolute ms-2 mt-1 text-${ForLike[index] ? 'danger' : ''} `} onClick={() => { AccessLike(index, upcommingitems) }}></span>
