@@ -6,7 +6,7 @@ const MovieDetails = () => {
   const item = location.state || {};
   const [IncVoteCount, setIncVoteCount] = useState(item.vote_count)
   function IncreaseVoteCount() {
-    setIncVoteCount(prevCount => prevCount + 1)
+    setIncVoteCount(item.vote_count+ 1)
   }
   return (
     <div>
@@ -26,7 +26,7 @@ const MovieDetails = () => {
                 <p><strong>Ratings :</strong> {item.vote_average} <span className='bi-star-fill'></span></p>
                 <section >
                   <p><strong>Vote Count:</strong> {IncVoteCount} <span className='bi-people-fill'></span>
-                    <button className='btn ms-3 bordered shadow' onClick={IncreaseVoteCount}>Vote</button>
+                    <button className='btn btn-outline-danger ms-3 bordered shadow' onClick={IncreaseVoteCount}>Vote</button>
                   </p>
                 </section>
                 <p><strong>Overview:</strong> {item.overview}</p>

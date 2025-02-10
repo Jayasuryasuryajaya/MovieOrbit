@@ -7,7 +7,6 @@
 }
 .btn{
 color:black;
-background-color: #E50914;
 }
 .card{
     height: fit-content;
@@ -28,9 +27,5 @@ background-color: #E50914;
     }
     .cover-image {
         max-width: 200px;
-    }
-    .btn{
-        background-color: #E50914;
-        
     }
 }
