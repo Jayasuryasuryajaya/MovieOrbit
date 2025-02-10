@@ -4,6 +4,9 @@ img:hover {
 .container-fluid{
     background-color: #0A0F1F;
     color: #B0B0B0;
+    display: flex;
+        justify-content: center;
+        align-items: center;
 }
 img {
     cursor: pointer;
@@ -31,15 +34,15 @@ img {
         flex-wrap: wrap; 
         justify-content: start;
         align-items: start;
-        margin-left:-52px;
-        
-
-    }
-    .image {
-        width:140px;
-        margin:10px;
-        margin-left:33px;
+        padding: 10px;
+        }
+    .col-4 {
+        width:100%;
         display: flex;
-    
+        justify-content: center;
+        align-items: center;
+    }
+    .image{
+        width:180px;
     }
 }

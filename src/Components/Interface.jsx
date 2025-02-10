@@ -16,7 +16,7 @@ const Interface = ({ MovieData, GetRecentViewData, GetLikedMovieData }) => {
     }
     return (
         <div>
-            <div className="container-fluid pt-3" style={{ minHeight: '100vh' }}>
+            <div className="container-fluid pt-3 " style={{ minHeight: '100vh' }}>
                 <div className="row">
                     {MovieData.map((item, index) => (
                         <div className="image  col-5 col-md-4 col-lg-3 col-xl-2 p-3" key={index}>
