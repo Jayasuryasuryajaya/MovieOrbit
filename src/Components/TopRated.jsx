@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import '../CSS/Interface.css'
 import { useNavigate } from 'react-router-dom'
-const TopRated = ({ GetRecentViewData, GetLikedMovieData }) => {
+const TopRated = ({ GetRecentViewData }) => {
     const navigate = useNavigate()
     const [TopRatedMovie, setTopRatedMovie] = useState([])
     useEffect(() => {
@@ -20,13 +20,6 @@ const TopRated = ({ GetRecentViewData, GetLikedMovieData }) => {
         navigate('/MovieDetails', { state: item })
 
     }
-    const [ForLike, setForLike] = useState(Array(TopRatedMovie.length).fill(false));
-    function AccessLike(index, topratitems) {
-        const copyData = [...ForLike];
-        copyData[index] = !copyData[index];
-        setForLike(copyData);
-        GetLikedMovieData(topratitems)
-    }
     return (
         <div>
 
@@ -35,7 +28,7 @@ const TopRated = ({ GetRecentViewData, GetLikedMovieData }) => {
 
                     {TopRatedMovie.map((topratitems, index) => (
                         <div className="image col-5 col-md-4 col-lg-3 col-xl-2 p-3" key={index}>
-                            <span className={`bi bi-heart${ForLike[index] ? '-fill' : ''} position-absolute ms-2 mt-1  text-${ForLike[index] ? 'danger' : ''} `} onClick={() => { AccessLike(index, topratitems) }}></span>
+
                             <img src={`https://image.tmdb.org/t/p/w500${topratitems.poster_path}`} alt={topratitems.title} width='200' height='250' id='image' onClick={() => { DetailedData(topratitems) }} style={{ cursor: 'pointer' }} />
                         </div>
                     ))}

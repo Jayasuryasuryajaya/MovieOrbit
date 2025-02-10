@@ -53,10 +53,10 @@ const App = () => {
   return (
     <div>
       {showIntro ? (
-        <div className="introtext fs-2 fw-bold" >
-          <span className="roll"> Roll... <span className='bi bi-film'></span></span>
-          <span className="camera"> Camera... <span className='bi-camera-reels-fill'></span> </span>
-          <span className="action"> Action! <span className='bi-lightbulb-fill'></span></span>
+        <div className="introtext fs-4 fw-bold" >
+          <span className="roll"> Roll... <span className='bi bi-film fs-1'></span></span>
+          <span className="camera ms-2">Camera...<span className='bi-camera-reels-fill fs-1'></span> </span>
+          <span className="action"> Action! <span className='bi-lightbulb-fill fs-1'></span></span>
         </div>
       ) : (
         <Suspense fallback={
@@ -71,7 +71,7 @@ const App = () => {
             <Route path='/' element={<Interface MovieData={MovieData} GetLikedMovieData={GetLikedMovieData} GetRecentViewData={GetRecentViewData} />} />
             <Route path='/MovieDetails' element={<MovieDetails />} />
             <Route path='/Popular' element={<Popular GetRecentViewData={GetRecentViewData} GetLikedMovieData={GetLikedMovieData} />} />
-            <Route path='/TopRated' element={<TopRated GetRecentViewData={GetRecentViewData} GetLikedMovieData={GetLikedMovieData} />} />
+            <Route path='/TopRated' element={<TopRated GetRecentViewData={GetRecentViewData} />} />
             <Route path='/Trendy' element={<Trendy GetRecentViewData={GetRecentViewData} GetLikedMovieData={GetLikedMovieData} />} />
             <Route path='/UpComming' element={<UpComming GetRecentViewData={GetRecentViewData} GetLikedMovieData={GetLikedMovieData} />} />
             <Route path='/RecentlyViewed' element={<RecentlyViewed Recentviewdata={Recentviewdata} setRecentviewdata={setRecentviewdata} />} />
